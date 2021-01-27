@@ -11,7 +11,7 @@ package no.hvl.dat109;
 public class Rute {
 
 	private int nummer;
-	
+
 	/**
 	 * Konstruktør for å opprette en rute
 	 * 
@@ -30,7 +30,4 @@ public class Rute {
 	public int getNummer() {
 		return nummer;
 	}
-
-	
-
 }

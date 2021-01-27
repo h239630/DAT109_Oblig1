@@ -16,9 +16,9 @@ public class Stigespill {
 	private List<Spiller> spillere;
 	private Brett brett;
 	private Terning terning;
-	
+
 	/**
-	 * Setter opp ett spill med ett gitt antall spillere. 
+	 * Setter opp ett spill med ett gitt antall spillere.
 	 * 
 	 * @param antallSpillere
 	 */
@@ -41,22 +41,17 @@ public class Stigespill {
 	 * @param antallSpiller
 	 */
 	public void startSpill() {
-		
 		boolean seier = false;
 		String vinner = "";
-
-		// Må legge inn seier betingelse - En spiller som står i rute 100
-
 		while (!seier) {
 			spillRunde();
-			
+
 			for (int i = 0; i < spillere.size(); i++) {
 				if (spillere.get(i).getBrikke().getPlassering().getNummer() >= 100) {
 					seier = true;
 					vinner = spillere.get(i).getNavn();
 				}
 			}
-			
 		}
 		System.out.println("Vinneren av spillet er " + vinner);
 	}
