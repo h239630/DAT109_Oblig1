@@ -5,26 +5,42 @@ package no.hvl.dat109;
 
 /**
  * Klasse for å opprette en brikke
+ * 
  * @author Mikael Lindebrekke & Joachim D. Nilsen
  */
 public class Brikke {
-	 private String farge; 
-
-	  /**
-	  * Oppretter en Brikke med farge farge
-		 * @param navn
-	  */
-	  public Brikke(String farge) {
-	    this.farge = farge;
-	  }
+	
+	private Rute plassering;
 
 	/**
-	 * @return the farge
+	 * Konstruktør for å opprette en brikke
+	 * 
 	 */
-	public String getFarge() {
-		return farge;
+	public Brikke(Brett brett) {
+		plassering = brett.getRuter().get(0);
 	}
 	
-	  
+	/**
+	 * Flytter en brikke verdi antall plasser på brettet. 
+	 * 
+	 * @param verdi
+	 * @param brett
+	 */
+	
+	public void flytt(int verdi, Brett brett) {
+		int plassNr = plassering.getNummer() + verdi;
+		plassering = brett.getRuter().get(plassNr);
+	}
+
+	/**
+	 * Returnerer brikken sin nåværende plassering. 
+	 * 
+	 * @return plassering
+	 */
+	public Rute getPlassering() {
+		return plassering;
+	}
+
+	
 
 }

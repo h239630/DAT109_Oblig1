@@ -14,17 +14,20 @@ public class Terning {
 	/**
 	 * Oppretter en terning som ikke har verdi enda. 
 	 */
-	public Terning() {
-		
-	}
+	public Terning() {}
 
 	/**
-	 * @return the verdi
+	 * Returnerer verdien til terningen. 
+	 * 
+	 * @return verdi
 	 */
 	public int getVerdi() {
 		return verdi;
 	} 
 	
+	/**
+	 * Triller en terning
+	 */
 	public void trill() {
 		verdi = (int) (Math.random() * 6) + 1;
 	}
